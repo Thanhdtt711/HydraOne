@@ -1,0 +1,24 @@
+{
+  "name": "strikefinance",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "npm run copy:wasm",
+    "copy:wasm": "cpx \"node_modules/@emurgo/cardano-multiplatform-lib-browser/cardano_multiplatform_lib_bg.wasm\" public && cpx \"node_modules/@emurgo/cardano-message-signing-browser/cardano_message_signing_bg.wasm\" public"
+  },
+  "dependencies": {
+    "@nuxt/ui": "^4.1.0",
+    "lucid-cardano": "^0.10.11",
+    "nuxt": "^4.2.0",
+    "vue": "^3.5.22",
+    "vue-router": "^4.6.3"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.14.0",
+    "cpx": "^1.5.0"
+  }
+}
